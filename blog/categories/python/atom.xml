@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: python | Pedro Camargo]]></title>
+  <title><![CDATA[Category: Python | Pedro Camargo]]></title>
   <link href="http://dropecamargo.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://dropecamargo.github.io/"/>
-  <updated>2014-09-03T14:15:26-05:00</updated>
+  <updated>2014-09-03T15:23:31-05:00</updated>
   <id>http://dropecamargo.github.io/</id>
   <author>
     <name><![CDATA[Pedro Camargo]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Instalando django + virtualenv]]></title>
+    <title type="html"><![CDATA[Instalando Django + Virtualenv]]></title>
     <link href="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/"/>
     <updated>2014-09-03T11:04:19-05:00</updated>
     <id>http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian</id>

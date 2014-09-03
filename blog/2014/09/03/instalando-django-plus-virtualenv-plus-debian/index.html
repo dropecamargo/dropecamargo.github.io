@@ -1,15 +1,11 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Instalando django + virtualenv - Pedro Camargo</title>
+  <title>Instalando Django + Virtualenv - Pedro Camargo</title>
   <meta name="author" content="Pedro Camargo">
 
   
-  <meta name="description" content="">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,86 +15,87 @@
 
   
   <link rel="canonical" href="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <style type="text/css">
-    body {
-      padding-bottom: 40px;
-    }
-    h1 {
-      margin-bottom: 15px;
-    }
-    img {
-      max-width: 100%;
-    }
-    .sharing, .meta, .pager {
-      margin: 20px 0px 20px 0px;
-    }
-    .page-footer p {
-      text-align: center;
-    }
-  </style>
-  <script src="/javascripts/libs/jquery.js"></script>
-  <script src="/javascripts/libs/modernizr-2.0.js"></script>
-  <script src="/javascripts/libs/bootstrap.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="Pedro Camargo" type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian">
+  <meta property="og:title" content="Instalando Django + Virtualenv - Pedro Camargo">
   
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
   
 
 </head>
 
-<body   >
-  <nav role="navigation"><div class="navbar navbar-inverse">
-  <div class="navbar-inner">
+  <body   >
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
     <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Pedro Camargo</a>
+        </div>
 
-      <a class="brand" href="/">Pedro Camargo</a>
-
-      <div class="nav-collapse">
-        <ul class="nav">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-
-        <ul class="nav pull-right" data-subscription="rss">
-          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-          
-        </ul>
-
-        
-          <form class="pull-right navbar-search" action="https://www.google.com/search" method="get">
-            <fieldset role="search">
-              <input type="hidden" name="q" value="site:dropecamargo.github.io" />
-              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
-            </fieldset>
-          </form>
-        
-      </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a rel="index" href="/">Blog</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Archives</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                    <input type="hidden" name="q" value="site:dropecamargo.github.io">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
     </div>
-  </div>
-</div>
 </nav>
-  <div class="container">
-    <div class="row-fluid">
-      
-<article class="hentry span9" role="article">
 
-  
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="Pedro Camargo" />
+    
+    <meta itemprop="url" content="http://dropecamargo.github.io" />
+    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      
   <header class="page-header">
     
-      <h1 class="entry-title">Instalando Django + Virtualenv</h1>
-    
-    
-      <p class="meta">
+      <p class="meta text-muted text-uppercase">
         
 
 
@@ -108,17 +105,24 @@
 
 
 
-  
 
 
-<time datetime="2014-09-03T11:04:19-05:00" pubdate data-updated="true"></time>
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-09-03T11:04:19-05:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2014-09-03T11:04:19-05:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>11:04 am</span></time></time>
         
       </p>
+    
+    
+    <h1 class="entry-title" itemprop="name headline">
+        Instalando Django + Virtualenv
+        
+    </h1>
     
   </header>
 
 
-<div class="entry-content"><p>Antes de nada debemos de tener instalado pip, un poderoso sistema de gestión de paquetes de software para Python.<br /></p>
+<div class="entry-content clearfix" itemprop="articleBody description"><p>Antes de nada debemos de tener instalado pip, un poderoso sistema de gestión de paquetes de software para Python.<br /></p>
 
 <pre>
     $ apt-get install python-pip
@@ -202,28 +206,30 @@
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
+      <footer>
+        <p class="meta text-muted">
+          
   
 
-<span class="byline author vcard">Posted by <span class="fn">Pedro Camargo</span></span>
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Pedro Camargo</span></span>
 
-      
-
-
+          
 
 
 
 
 
 
-  
 
 
-<time datetime="2014-09-03T11:04:19-05:00" pubdate data-updated="true"></time>
-      
 
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-09-03T11:04:19-05:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2014-09-03T11:04:19-05:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>11:04 am</span></time></time>
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
     <a class='category' href='/blog/categories/django/'>django</a>, <a class='category' href='/blog/categories/pip/'>pip</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/virtualenv/'>virtualenv</a>
@@ -231,59 +237,71 @@
 </span>
 
 
-    </p>
-    
-      <div class="sharing">
+        </p>
+        
+          <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/" data-via="dropecamargo" data-counturl="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/" data-via="dropecamargo" data-counturl="http://dropecamargo.github.io/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/" >Tweet</a>
   
   
   
 </div>
 
+        
+        
+      </footer>
+    </article>
     
-    
-    <ul class="pager">
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-    </ul>
-  </footer>
-</article>
+  </div>
 
-<aside class="sidebar-nav span3">
   
-    <section class="well">
-  <ul id="recent_posts" class="nav nav-list">
-    <li class="nav-header">Recent Posts</li>
+  <aside class="sidebar col-md-3">
     
-      <li class="post">
-        <a href="/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/">Instalando django + virtualenv</a>
-      </li>
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
     
-  </ul>
+    <a class="list-group-item active" href="/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/">Instalando Django + Virtualenv</a>
+    
+  </div>
 </section>
 
-<section class="well">
-  <ul id="gh_repos" class="nav">
-    <li class="nav-header">GitHub Repos</li>
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <h3 class="panel-title">GitHub Repos</h3>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating&#8230;</p>
+  </div>
   
-  <a href="https://github.com/dropecamargo">@dropecamargo</a> on GitHub
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/dropecamargo">@dropecamargo</a> on GitHub
+    </div>
   
   <script type="text/javascript">
     $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
         github.showRepos({
             user: 'dropecamargo',
-            count: 0,
+            count: 6,
             skip_forks: true,
             target: '#gh_repos'
         });
     });
   </script>
-  <script src="/javascripts/asides/github.js" type="text/javascript"> </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
+
 
 
 
@@ -296,7 +314,7 @@
   </ul>
   <script type="text/javascript">
     $(document).ready(function(){
-      getTwitterFeed("dropecamargo", , );
+      getTwitterFeed("dropecamargo", 6, true);
     });
   </script>
   <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
@@ -306,20 +324,26 @@
 </section>
 
 
+    
+  </aside>
   
-</aside>
+</div>
 
-
+        </div>
+      </div>
     </div>
-  </div>
-  <footer role="contentinfo" class="page-footer"><hr>
-<p>
-  Copyright &copy; 2014 - Pedro Camargo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2014 - Pedro Camargo<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
+      <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
+  </small>
 </p>
 
+</div>
 </footer>
-  
+    
 
 
 
@@ -332,14 +356,15 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
 
 
+<script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
 
 
-
-</body>
+  </body>
 </html>
