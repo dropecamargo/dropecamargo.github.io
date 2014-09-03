@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Pedro Camargo</title>
+  <title>Category: python - Pedro Camargo</title>
   <meta name="author" content="Pedro Camargo">
 
   
-  <meta name="description" content="">
+  <meta name="description" content="Category: python">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dropecamargo.github.io">
+  <link rel="canonical" href="http://dropecamargo.github.io/blog/categories/python">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -89,131 +89,41 @@
 </nav>
   <div class="container">
     <div class="row-fluid">
-      <div class="span9">
-  
-  
-  
-    <article>
       
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/">Instalando Django + Virtualenv</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+<article role="article" class="span9">
 
   
-
-
-<time datetime="2014-09-03T11:04:19-05:00" pubdate data-updated="true"></time>
-        
-      </p>
+  <header class="page-header">
+    <h1 class="entry-title">Category: Python</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-  <div class="entry-content"><p>Antes de nada debemos de tener instalado pip, un poderoso sistema de gestión de paquetes de software para Python.<br /></p>
 
-<pre>
-    $ apt-get install python-pip
-</pre>
+  
+  <h1>2014</h1>
 
+<article>
+  <div class="well">
 
-<p>Instalamos virtualenv:</p>
+<h2><a href="/blog/2014/09/03/instalando-django-plus-virtualenv-plus-debian/">Instalando django + virtualenv</a></h2>
+<time datetime="2014-09-03T11:04:19-05:00" pubdate><span class='month'>Sep</span> <span class='day'>03</span> <span class='year'>2014</span></time>
 
-<pre>
-    $ pip install virtualenv
-</pre>
-
-
-<p>Creamos y activamos nuestro primer ambiente virtual:</p>
-
-<pre>
-    $ virtualenv firstenv
-    $ cd firstenv
-    $ source bin/activate
-</pre>
-
-
-<p>Una vez activo instalamos la ultima versión de <a href="http://djangoproject.com/" target="_blank">django</a> disponible:</p>
-
-<pre>
-    (firstenv) $ pip install django -U
-</pre>
-
-
-<p>Iniciamos nuestra primera aplicación:</p>
-
-<pre>
-    (firstenv) $ django-admin.py startproject firstapp
-    (firstenv) $ cd firstapp
-</pre>
-
-
-<p>Arrancamos el servidor:</p>
-
-<pre>
-    (firstenv) $ python manage.py runserver
-</pre>
-
-
-<p><a href="http://127.0.0.1:8000/" target="_blank"><a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></a>&nbsp;
-<a href="http://localhost:8000/" target="_blank"><a href="http://localhost:8000">http://localhost:8000</a></a>
-<br /></p>
-
-<p>Para instalar soporte postgres para django debemos tener instalado el paquete dev de python, luego instalamos psycopg2:</p>
-
-<pre>
-    $ apt-get install python-dev
-    $ pip install psycopg2
-</pre>
-
-
-<p>Editamos el archivo de configuración firstapp/settings.py:</p>
-
-<pre>$ DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'firstapp',
-        'USER': 'admin',
-        'PASSWORD': 'firstpasswd',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-</pre>
-
-
-<p>Actualizamos la base de datos:</p>
-
-<pre>$ python manage.py syncdb</pre>
-
-
-<p>Para salir del ambiente virtual utilizamos:</p>
-
-<pre>$ deactivate</pre>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/django/'>django</a>, <a class='category' href='/blog/categories/pip/'>pip</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/virtualenv/'>virtualenv</a></span>
+</footer>
 
 </div>
-  
-  
 
+</article>
 
-    </article>
-  
-  <ul class="pager">
-    
-    <li><a href="/blog/archives">Blog Archives</a></li>
-    
-  </ul>
 </div>
+
+  
+</article>
+
 <aside class="sidebar-nav span3">
   
     <section class="well">
@@ -233,6 +143,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
